@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Services
+permalink: /services/
+services:
+  - img: service-producing.jpg
+    title: Podcast Producing
+    tags: Producing | Hosting | Content Creation
+    text: My all-inclusive, &ldquo;the works&rdquo;, package. As a podcast producer, I work with you on all aspects of your podcast including but not limited to ideation for your show and individual episodes, research on topics and guests, logo and cover art, website design, guest scouting and scheduling, hosting, recording, sound designing and editing, generating podcast content through AI tools, and anything else! The industry is evolving at a pace faster than ever. So, I&rsquo;m all in to work at the cutting edge of podcasting.
+  - img: service-sound.jpg
+    title: Sound Editing
+    tags: Sound Design | Sound Editing | Audio Mixing
+    text: My sound design and editing services include expert level episode editing, intuitive use of story beats and episode audio clips, theme music and background score selection, audio cleaning, noise reduction using high-end editing software such as Hindenberg Pro. In short, let me create a memorable sound experience for your listeners!
+  - img: service-editing.jpg
+    title: Podcast Editing
+    tags: Enhancing Stories | Audio Selection | Framing
+    text: Podcast editing services include some of my favorite things about storytelling such as deciding the right framing, sharpening the story arcs, bringing the story beats together, and enhancing your episodes with intros, outros etc.
+  - img: service-speaking.gif
+    title: Speeches &amp; Lectures
+    tags: "Avid speaker on: Storytelling | Racial Justice | Equality"
+    text: I believe in sharing my passion of storytelling and the knowledge I have acquired on podcasts with those getting started in this field. I have done lectures at schools and colleges, spoken at conferences, hosted podcast socials, and worked intimately in small groups.
+---
+<section class="page-hero page-hero--services">
+  <h1>What I Do</h1>
+</section>
+
+{%- for s in services %}
+<section class="service" id="{{ loop.index }}">
+  <div class="service__img"><img src="/assets/img/{{ s.img }}" alt="" loading="lazy"></div>
+  <div class="service__text">
+    <h5 class="service__num">#{{ loop.index }}</h5>
+    <h2>{{ s.title | safe }}</h2>
+    <p class="service__tags"><strong>{{ s.tags }}</strong></p>
+    <p>{{ s.text | safe }}</p>
+  </div>
+</section>
+{%- endfor %}
+
+{% include "cta-pink.njk" %}

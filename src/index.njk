@@ -1,0 +1,86 @@
+---
+layout: base.njk
+bodyClass: home
+---
+<section class="home-hero">
+  <div class="home-hero__text">
+    <h1>YAMINI RANJAN</h1>
+    <h3>PODCASTER.</h3>
+    <h3>PRODUCER.</h3>
+    <h3>MARKETER.</h3>
+  </div>
+</section>
+
+<section class="home-about dark-band">
+  <div class="dark-band__inner">
+    <h2>About Me</h2>
+    <p>I am stoked to have you here &ndash; thanks for stopping by! I am a Type 3 Enneagram personality, which means I am a performer and a problem solver. I found my passion for storytelling in my 30s after experiencing the joy of motherhood. I see stories, I feel stories, and I love sharing them.</p>
+    <p>As we swim in bite-sized content, data, and opinions, what truly connects us with each other is a good story. And when you stumble upon one, you give it your time! Your most precious resource. Let me help you tell your story.</p>
+    <a class="btn btn--light" href="/about/">Read More</a>
+  </div>
+</section>
+
+<section class="home-services">
+  <div class="container">
+    <div class="home-services__head">
+      <h2>My Services</h2>
+      <a class="btn" href="/contact/">Work With Me</a>
+    </div>
+
+    <div class="service-cards">
+      {%- set cards = [
+        { img: "service-producing.jpg", title: "Podcast Producer", text: "Producing, hosting, content creation", anchor: "1" },
+        { img: "service-sound.jpg", title: "Sound Editing", text: "Sound design, sound editing, audio mixing", anchor: "2" },
+        { img: "service-editing.jpg", title: "Podcast Editing", text: "Enhancing stories, audio selection, framing", anchor: "3" },
+        { img: "service-speaking.gif", title: "Speaking", text: "Avid speaker on storytelling, racial justice, equality", anchor: "4" }
+      ] %}
+      {%- for card in cards %}
+      <article class="service-card">
+        <img src="/assets/img/{{ card.img }}" alt="" loading="lazy">
+        <h4>{{ card.title }}</h4>
+        <p>{{ card.text }}</p>
+        <a class="link-arrow" href="/services/#{{ card.anchor }}">Learn More
+          <svg viewBox="0 0 320 512" width="6" height="10" aria-hidden="true"><path fill="currentColor" d="M285.5 273 91.1 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.7-22.7c-9.4-9.4-9.4-24.5 0-33.9L188.5 256 34.5 101.3c-9.3-9.4-9.3-24.5 0-33.9l22.7-22.7c9.4-9.4 24.6-9.4 33.9 0L285.5 239c9.4 9.4 9.4 24.6 0 34z"/></svg>
+        </a>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <div class="featured">
+      <div class="featured__media">
+        <a class="play-btn" href="https://womenofwayland.com/" target="_blank" rel="noopener" aria-label="Listen to Women of Wayland">
+          <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M424.4 214.7 72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg>
+        </a>
+      </div>
+      <div class="featured__text">
+        <h6 class="eyebrow">Featured Work</h6>
+        <h2>Women of Wayland</h2>
+        <p class="lead">A hometown podcast to celebrate women in the neighborhood.</p>
+        <p>I was inspired by my next-door women, who were professionals, mums, activists, volunteers, do-it-all hustlers in the true sense. I felt like there was a massive acknowledgement gap. There were stories that you would miss if you blinked too fast, but if you give them just a moment, it could leave you inspired.</p>
+        <a class="btn" href="/portfolio/">View My Portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-review">
+  <div class="container home-review__grid">
+    <div class="home-review__text">
+      <div class="stars stars--pink" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"Yamini is such a gracious host whose warmth just exudes from her voice. Her talents don&rsquo;t just end with her storytelling though. The editing that she does with each of her episode is meticulous and you can hear how well she mixes sounds and tunes in them. This woman is going places &#x1F4AA;&#x1F3FD;"</blockquote>
+      <h5>- Apple Podcast Listener</h5>
+      <a class="btn" href="/testimonials/">More Reviews</a>
+    </div>
+    <div class="home-review__img">
+      <img src="/assets/img/yamini-sitting.png" alt="Yamini Ranjan sitting in a chair" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="home-cta dark-band">
+  <div class="dark-band__inner">
+    <h2>Let's Work Together!</h2>
+    <p>Learning, listening and leading are the mantras I live by. My experience combined with my degrees and passion make me the storyteller I am. Let me help you give wings to your story.</p>
+    <a class="btn btn--light" href="/contact/">Get In Touch</a>
+  </div>
+</section>
