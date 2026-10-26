@@ -2,81 +2,129 @@
 layout: base.njk
 title: Portfolio
 permalink: /portfolio/
+description: Podcasts Yamini Ranjan has produced, hosted, and edited, plus press coverage, talks, and panels.
 ---
-<section class="page-hero page-hero--portfolio">
-  <h1>Portfolio</h1>
+<section class="page-head">
+  <div class="wrap page-head__inner">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Shows, stories, and stages.</h1>
+    <p class="page-head__lead">Podcasts I’ve created, produced, and edited — and the newspapers, radio programs, and community stages where my work has been featured.</p>
+  </div>
 </section>
 
-<div class="portfolio">
-  <article class="pf-card">
-    <div class="pf-card__media">
-      <img src="/assets/img/pf-wow.jpg" alt="Women of Wayland Podcast cover art" loading="lazy">
-      <a class="btn" href="https://womenofwayland.com/" target="_blank" rel="noopener">Visit Website</a>
+<section class="section" id="media">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">Media showcase</p>
+      <h2>In the news, on air, and on stage</h2>
     </div>
-    <div class="pf-card__text">
-      <h2>Host &amp; Producer</h2>
-      <h5>Women of Wayland Podcast</h5>
-      <p>Women of Wayland is a podcast born out of the core belief that the most unassuming women around us have the most remarkable stories to tell.</p>
-      <iframe title="Women of Wayland on Apple Podcasts" loading="lazy" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="450" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/women-of-wayland-the-podcast/id1471535994"></iframe>
+    <div class="media-grid">
+      {%- for m in media %}
+      <a class="media-card" href="{{ m.url }}" target="_blank" rel="noopener">
+        <span class="media-card__type">{{ m.type }}</span>
+        <span class="media-card__outlet">{{ m.outlet }}</span>
+        <span class="media-card__title">{{ m.title }}</span>
+        <span class="media-card__summary">{{ m.summary }}</span>
+        <span class="media-card__meta">{% if m.date %}{{ m.date }} · {% endif %}Read more <span aria-hidden="true">↗</span></span>
+      </a>
+      {%- endfor %}
     </div>
-  </article>
-
-  <article class="pf-card">
-    <div class="pf-card__media">
-      <img src="/assets/img/pf-nyaf.jpg" alt="Now You Are Free Podcast cover art" loading="lazy">
-      <a class="btn" href="https://nowyouarefreepod.com/" target="_blank" rel="noopener">Visit Website</a>
-    </div>
-    <div class="pf-card__text">
-      <h2>Producer</h2>
-      <h5>Now You Are Free Podcast</h5>
-      <p>Now You Are Free is a podcast which explores our approach to punishment and incarceration, demonstrating the triumph of the human spirit over adversity, and delving into what it takes to turn a life around.</p>
-      <iframe title="Now You Are Free on Apple Podcasts" loading="lazy" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="450" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/now-you-are-free-podcast/id1624253860"></iframe>
-    </div>
-  </article>
-
-  <article class="pf-card">
-    <div class="pf-card__media">
-      <img src="/assets/img/pf-peacetalks.jpg" alt="Love Is Respect — Peace Talks Radio" loading="lazy">
-      <a class="btn" href="https://beta.prx.org/stories/428546" target="_blank" rel="noopener">View Episode</a>
-    </div>
-    <div class="pf-card__text">
-      <h2>Radio Correspondent</h2>
-      <h5>Peace Talks Radio</h5>
-      <p>On this edition of PEACE TALKS RADIO, episode correspondent Yamini Ranjan explores the dynamics of dating and breakups among teens with three guests who explore a range of issues such as the psychology of domestic violence, in-school programs that are geared toward prevention of teen violence, and personal motivations that drive work on this issue</p>
-    </div>
-  </article>
-
-  <article class="pf-card pf-card--editor">
-    <div class="pf-card__media"><img src="/assets/img/pf-career-safari.jpg" alt="Career Safari podcast cover art" loading="lazy"></div>
-    <div class="pf-card__media"><img src="/assets/img/pf-hope.png" alt="Of Hope &amp; Perseverance podcast cover art" loading="lazy"></div>
-    <div class="pf-card__text">
-      <h2>Editor</h2>
-      <p>Podcast audio editing work for:</p>
-      <ul>
-        <li>Career Safari</li>
-        <li>Of Hope And Perseverance</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="pf-card">
-    <div class="pf-card__media">
-      <img src="/assets/img/pf-wayland-seal.jpg" alt="Town of Wayland seal" loading="lazy">
-      <a class="btn" href="https://www.wayland.ma.us/human-rights-diversity-equity-and-inclusion-committee" target="_blank" rel="noopener">Visit Website</a>
-    </div>
-    <div class="pf-card__text">
-      <h2>Volunteer Work</h2>
-      <h5>Chair &amp; Founding Member, HRDEIC - Wayland, MA</h5>
-      <p>The Human Rights, Diversity, Equity and Inclusion Committee (HRDEIC) was created to affirm that the Town of Wayland is an inclusive community that has, as one of its core values, the freedom from discrimination, disrespect, bigotry, other forms of microaggressions, macroaggressions, hatred and oppression, and to reaffirm the Town&rsquo;s commitment to upholding and defending the rights of all individuals to enjoy the free and equal exercise of their human and civil rights and privileges.</p>
-    </div>
-  </article>
-
-  <hr class="divider">
-  <h2 class="grants-title">Grants</h2>
-  <div class="grants">
-    <img src="/assets/img/grant-ldamf.jpg" alt="Lauren Dunne Astley Memorial Fund" loading="lazy">
-    <img src="/assets/img/grant-village-bank.jpg" alt="The Village Bank" loading="lazy">
-    <img src="/assets/img/grant-wayland-cc.png" alt="Wayland Cultural Council" loading="lazy">
-    <img src="/assets/img/grant-ifw.png" alt="IFundWomen of Color" loading="lazy">
   </div>
-</div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">Podcast work</p>
+      <h2>Selected shows</h2>
+    </div>
+
+    <div class="work-list">
+      <article class="work">
+        <img class="work__art" src="/assets/img/pf-wow.jpg" alt="Women of Wayland Podcast cover art" loading="lazy">
+        <div class="work__body">
+          <p class="work__role">Creator, host &amp; producer</p>
+          <h3>Women of Wayland – The Podcast</h3>
+          <p>A podcast born out of the belief that the most unassuming women around us have the most remarkable stories to tell. Now in its fifth season, focused on women in local governance.</p>
+          <div class="work__links">
+            <a class="link" href="https://womenofwayland.com/" target="_blank" rel="noopener">Website</a>
+            <a class="link" href="https://podcasts.apple.com/us/podcast/women-of-wayland-the-podcast/id1471535994" target="_blank" rel="noopener">Apple Podcasts</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <img class="work__art" src="/assets/img/pf-nyaf.jpg" alt="Now You Are Free Podcast cover art" loading="lazy">
+        <div class="work__body">
+          <p class="work__role">Producer &amp; editor</p>
+          <h3>Now You Are Free</h3>
+          <p>Explores our approach to punishment and incarceration, demonstrating the triumph of the human spirit over adversity and what it takes to turn a life around.</p>
+          <div class="work__links">
+            <a class="link" href="https://nowyouarefreepod.com/" target="_blank" rel="noopener">Website</a>
+            <a class="link" href="https://podcasts.apple.com/us/podcast/now-you-are-free-podcast/id1624253860" target="_blank" rel="noopener">Apple Podcasts</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <img class="work__art work__art--wide" src="/assets/img/pf-peacetalks.jpg" alt="Love Is Respect episode art" loading="lazy">
+        <div class="work__body">
+          <p class="work__role">Episode correspondent</p>
+          <h3>Peace Talks Radio</h3>
+          <p>Explored the dynamics of dating and breakups among teens with three guests, covering the psychology of domestic violence, in-school prevention programs, and the motivations behind this work.</p>
+          <div class="work__links">
+            <a class="link" href="https://beta.prx.org/stories/428546" target="_blank" rel="noopener">Listen to the episode</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work__art work__art--pair">
+          <img src="/assets/img/pf-career-safari.jpg" alt="Career Safari podcast cover art" loading="lazy">
+          <img src="/assets/img/pf-hope.png" alt="Of Hope &amp; Perseverance podcast cover art" loading="lazy">
+        </div>
+        <div class="work__body">
+          <p class="work__role">Audio editor</p>
+          <h3>Career Safari &amp; Of Hope and Perseverance</h3>
+          <p>Podcast audio editing for two independent shows, from cleanup and story edits to the final mix.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">Community</p>
+      <h2>Leadership &amp; volunteer work</h2>
+    </div>
+    <div class="cards cards--2">
+      <div class="card card--logo">
+        <img src="/assets/img/pf-wayland-seal.jpg" alt="Town of Wayland seal" loading="lazy">
+        <div>
+          <h3>Chair &amp; founding member, HRDEIC</h3>
+          <p>Wayland’s Human Rights, Diversity, Equity and Inclusion Committee affirms the town as an inclusive community and defends the rights of all individuals to the free and equal exercise of their human and civil rights.</p>
+          <a class="link" href="https://www.wayland.ma.us/human-rights-diversity-equity-and-inclusion-committee" target="_blank" rel="noopener">Visit the committee</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Co-founder, Wayland Multicultural Festival</h3>
+        <p>A community celebration launched by the HRDEI Committee in 2022 to bring Wayland residents of every background together.</p>
+        <a class="link" href="https://www.waylandpost.org/news/town-getting-ready-for-expanded-wayland-festival/" target="_blank" rel="noopener">Read in The Wayland Post</a>
+      </div>
+    </div>
+
+    <div class="grants">
+      <p class="grants__label">Supported by grants from</p>
+      <div class="grants__logos">
+        <img src="/assets/img/grant-ldamf.jpg" alt="Lauren Dunne Astley Memorial Fund" loading="lazy">
+        <img src="/assets/img/grant-village-bank.jpg" alt="The Village Bank" loading="lazy">
+        <img src="/assets/img/grant-wayland-cc.png" alt="Wayland Cultural Council" loading="lazy">
+        <img src="/assets/img/grant-ifw.png" alt="IFundWomen of Color" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "cta.njk" %}

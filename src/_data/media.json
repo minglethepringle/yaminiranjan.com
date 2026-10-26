@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Newspaper",
+    "outlet": "The Wayland Post",
+    "title": "Resident Shares Local Voices on Podcast",
+    "summary": "A profile of Yamini’s interview process on Women of Wayland and her plans for the show’s fifth season on women in local governance.",
+    "date": "May 2025",
+    "url": "https://www.waylandpost.org/news/resident-shares-local-voices-on-podcast/"
+  },
+  {
+    "type": "Newspaper",
+    "outlet": "The Wayland Post",
+    "title": "Town Getting Ready for Expanded Wayland Festival",
+    "summary": "Quoted as co-founder of the Wayland Multicultural Festival, launched by the town’s HRDEI Committee in 2022.",
+    "date": "October 2025",
+    "url": "https://www.waylandpost.org/news/town-getting-ready-for-expanded-wayland-festival/"
+  },
+  {
+    "type": "Radio",
+    "outlet": "Peace Talks Radio",
+    "title": "Love Is Respect: Teen Dating and Breakups",
+    "summary": "Episode correspondent exploring teen relationships, the psychology of dating violence, and in-school prevention programs.",
+    "url": "https://beta.prx.org/stories/428546"
+  },
+  {
+    "type": "Presenter",
+    "outlet": "Wayland Free Public Library",
+    "title": "Great Presenters: Wayland’s New HRDEIC",
+    "summary": "Co-presented with Karen Blumenfeld on the work of Wayland’s Human Rights, Diversity, Equity and Inclusion Committee.",
+    "url": "https://waylandlibrary.org/blog/2023/03/30/great-presenters-waylands-new-hrdeic/"
+  },
+  {
+    "type": "Panelist",
+    "outlet": "Wayland Children & Parents Association",
+    "title": "2023 Parent Support Forum",
+    "summary": "Featured speaker representing the Women of Wayland Podcast alongside local practitioners.",
+    "date": "March 2023",
+    "url": "https://waylandwcpa.org/parentenrichment"
+  },
+  {
+    "type": "Website",
+    "outlet": "Women of Wayland",
+    "title": "womenofwayland.com",
+    "summary": "Home of the podcast Yamini created, hosts, and produces — five seasons of stories from remarkable next-door women.",
+    "url": "https://womenofwayland.com/"
+  }
+]

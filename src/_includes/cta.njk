@@ -1,0 +1,16 @@
+<section class="cta">
+  <div class="wrap cta__inner">
+    <div>
+      <h2>{{ ctaTitle or "Ready to make your podcast sound its best?" }}</h2>
+      <p>{{ ctaText or "Start with a consultation call. We’ll talk about your show, your goals, and whether editing support or a workshop is the right fit." }}</p>
+    </div>
+    <div class="cta__actions">
+      {%- if ctaHref %}
+      <a class="btn btn--light" href="{{ ctaHref }}">{{ ctaLabel }}</a>
+      {%- else %}
+      <a class="btn btn--light" href="https://calendly.com/yaminiranjan" target="_blank" rel="noopener">Book a consultation</a>
+      {%- endif %}
+      <a class="btn btn--ghost-light" href="/contact/">Send a message</a>
+    </div>
+  </div>
+</section>

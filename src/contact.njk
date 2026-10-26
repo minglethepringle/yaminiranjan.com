@@ -2,43 +2,55 @@
 layout: base.njk
 title: Contact
 permalink: /contact/
+description: Book a consultation or send a message about podcast editing, production, or workshops.
 ---
-<section class="page-hero page-hero--contact">
-  <h1>Contact</h1>
-</section>
+<section class="page-head">
+  <div class="wrap contact">
+    <div class="contact__intro">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s talk about your podcast.</h1>
+      <p class="page-head__lead">The fastest way to get started is a consultation call. Prefer email? Send a message with a few details and I’ll get back to you.</p>
+      <div class="contact__option">
+        <h2>Book a consultation</h2>
+        <p>Pick a time that works for you on my calendar.</p>
+        <a class="btn btn--primary" href="https://calendly.com/yaminiranjan" target="_blank" rel="noopener">Open my calendar</a>
+      </div>
+    </div>
 
-<section class="contact">
-  <div class="contact__intro">
-    <h2>Let's chat!</h2>
-    <p>If you&rsquo;d like to meet virtually on a call, you can book a consultation meeting through Calendly by clicking the button below. Otherwise, feel free to send an email by filling out the contact form. I look forward to getting in contact with you!</p>
-    <a class="btn" href="https://calendly.com/yaminiranjan" target="_blank" rel="noopener">Book Consultation Call</a>
+    {#- Static hosting has no server to receive the form; it posts to the endpoint in src/_data/site.json. #}
+    <form class="contact-form" action="{{ site.contactFormAction }}" method="POST">
+      <h2>Send a message</h2>
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="topic">I’m interested in <span class="req" aria-hidden="true">*</span></label>
+        <select id="topic" name="topic" required>
+          <option value="editing">Podcast editing</option>
+          <option value="sound">Sound design &amp; mixing</option>
+          <option value="production">End-to-end production</option>
+          <option value="workshop">A workshop or class</option>
+          <option value="speaking">Speaking or a panel</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your show or your group"></textarea>
+      </div>
+      <button class="btn btn--primary" type="submit">Send message</button>
+    </form>
   </div>
-
-  {#- Static hosting has no server to receive the form; it posts to the endpoint in src/_data/site.json. #}
-  <form class="contact-form" action="{{ site.contactFormAction }}" method="POST">
-    <label for="name">Name <span class="req">*</span></label>
-    <input id="name" name="name" type="text" required>
-
-    <label for="email">Email <span class="req">*</span></label>
-    <input id="email" name="email" type="email" required>
-
-    <label for="topic">Inquiry Topic <span class="req">*</span></label>
-    <select id="topic" name="topic" required>
-      <option>Podcast Producing</option>
-      <option>Podcast Hosting</option>
-      <option>Podcast Editing</option>
-      <option>Sound Editing / Mixing</option>
-      <option>Sound Design</option>
-      <option>Speaking Engagements</option>
-      <option>Other</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <input id="subject" name="subject" type="text">
-
-    <label for="message">Message <span class="req">*</span></label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <button class="btn" type="submit">Submit</button>
-  </form>
 </section>
+
+<script>
+  const topic = new URLSearchParams(location.search).get("topic");
+  if (topic) document.getElementById("topic").value = topic;
+</script>

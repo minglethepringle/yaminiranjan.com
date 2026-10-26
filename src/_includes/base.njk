@@ -1,47 +1,80 @@
 {%- set nav = [
-  { title: "Home", url: "/" },
-  { title: "About", url: "/about/" },
-  { title: "Services", url: "/services/" },
+  { title: "Editing", url: "/services/" },
+  { title: "Workshops", url: "/workshops/" },
   { title: "Portfolio", url: "/portfolio/" },
   { title: "Testimonials", url: "/testimonials/" },
-  { title: "Contact", url: "/contact/" }
+  { title: "About", url: "/about/" }
 ] -%}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} - {% endif %}Yamini Ranjan</title>
-  <meta name="description" content="{{ description or 'Yamini Ranjan — podcaster, producer, and marketer. Podcast producing, sound editing, podcast editing, and speaking.' }}">
+  <title>{% if title %}{{ title }} | {% endif %}Yamini Ranjan — Podcast Editor &amp; Educator</title>
+  <meta name="description" content="{{ description or 'Yamini Ranjan is a podcast editor, producer, and educator. Professional podcast editing and mixing, plus workshops and classes on podcasting and audio editing.' }}">
   <link rel="icon" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Karla:ital,wght@0,400;0,600;1,600&family=Roboto:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="{{ bodyClass }}">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="logo" href="/"><img src="/assets/img/logo.png" alt="Yamini Ranjan" width="50" height="50"></a>
-    <button class="menu-toggle" aria-label="Main menu" aria-expanded="false" aria-controls="site-nav">
-      <svg class="icon-open" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M2 4h16v2H2zm0 5h16v2H2zm0 5h16v2H2z"/></svg>
-      <svg class="icon-close" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M5.05 3.64 10 8.59l4.95-4.95 1.41 1.41L11.41 10l4.95 4.95-1.41 1.41L10 11.41l-4.95 4.95-1.41-1.41L8.59 10 3.64 5.05z"/></svg>
-    </button>
-    <nav id="site-nav" class="site-nav">
-      <ul>
-        {%- for item in nav %}
-        <li><a href="{{ item.url }}"{% if page.url == item.url %} class="current" aria-current="page"{% endif %}>{{ item.title }}</a></li>
-        {%- endfor %}
-      </ul>
-    </nav>
+    <div class="wrap site-header__inner">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.png" alt="" width="40" height="40">
+        <span class="brand__text">
+          <span class="brand__name">Yamini Ranjan</span>
+          <span class="brand__tag">Podcast Editor &amp; Educator</span>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          {%- for item in nav %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {%- endfor %}
+        </ul>
+        <a class="btn btn--primary btn--sm" href="/contact/">Book a consultation</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
 {{ content | safe }}
   </main>
 
   <footer class="site-footer">
-    <p>Copyright &copy; {{ "now" | year }} Yamini Ranjan</p>
-    <p>Designed by&nbsp;<a href="https://mingletechsolutions.com/" target="_blank" rel="noopener">Mingle Tech Solutions</a></p>
+    <div class="wrap site-footer__grid">
+      <div>
+        <p class="site-footer__name">Yamini Ranjan</p>
+        <p>Podcast editing, production, and workshops.<br>Based in Wayland, Massachusetts.</p>
+      </div>
+      <div>
+        <p class="site-footer__heading">Explore</p>
+        <ul>
+          {%- for item in nav %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {%- endfor %}
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__heading">Connect</p>
+        <ul>
+          <li><a href="https://calendly.com/yaminiranjan" target="_blank" rel="noopener">Book a call</a></li>
+          <li><a href="https://www.linkedin.com/in/yaminiranjan/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://womenofwayland.com/" target="_blank" rel="noopener">Women of Wayland</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>Copyright &copy; {{ "now" | year }} Yamini Ranjan</p>
+      <p>Designed by&nbsp;<a href="https://mingletechsolutions.com/" target="_blank" rel="noopener">Mingle Tech Solutions</a></p>
+    </div>
   </footer>
 
   <script>

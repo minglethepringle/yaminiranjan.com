@@ -1,86 +1,131 @@
 ---
 layout: base.njk
-bodyClass: home
 ---
-<section class="home-hero">
-  <div class="home-hero__text">
-    <h1>YAMINI RANJAN</h1>
-    <h3>PODCASTER.</h3>
-    <h3>PRODUCER.</h3>
-    <h3>MARKETER.</h3>
-  </div>
-</section>
-
-<section class="home-about dark-band">
-  <div class="dark-band__inner">
-    <h2>About Me</h2>
-    <p>I am stoked to have you here &ndash; thanks for stopping by! I am a Type 3 Enneagram personality, which means I am a performer and a problem solver. I found my passion for storytelling in my 30s after experiencing the joy of motherhood. I see stories, I feel stories, and I love sharing them.</p>
-    <p>As we swim in bite-sized content, data, and opinions, what truly connects us with each other is a good story. And when you stumble upon one, you give it your time! Your most precious resource. Let me help you tell your story.</p>
-    <a class="btn btn--light" href="/about/">Read More</a>
-  </div>
-</section>
-
-<section class="home-services">
-  <div class="container">
-    <div class="home-services__head">
-      <h2>My Services</h2>
-      <a class="btn" href="/contact/">Work With Me</a>
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">Podcast editor · Producer · Educator</p>
+      <h1>Podcasts that sound as good as the stories behind them.</h1>
+      <p class="hero__lead">I edit and mix podcasts for creators and organizations, and I teach workshops that help new podcasters plan, record, and edit with confidence.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="https://calendly.com/yaminiranjan" target="_blank" rel="noopener">Book a consultation</a>
+        <a class="btn btn--outline" href="/workshops/">Explore workshops</a>
+      </div>
     </div>
+    <div class="hero__media">
+      <img src="/assets/img/hero-yamini.png" alt="Yamini Ranjan wearing studio headphones" width="1024" height="1536">
+    </div>
+  </div>
+</section>
 
-    <div class="service-cards">
-      {%- set cards = [
-        { img: "service-producing.jpg", title: "Podcast Producer", text: "Producing, hosting, content creation", anchor: "1" },
-        { img: "service-sound.jpg", title: "Sound Editing", text: "Sound design, sound editing, audio mixing", anchor: "2" },
-        { img: "service-editing.jpg", title: "Podcast Editing", text: "Enhancing stories, audio selection, framing", anchor: "3" },
-        { img: "service-speaking.gif", title: "Speaking", text: "Avid speaker on storytelling, racial justice, equality", anchor: "4" }
-      ] %}
-      {%- for card in cards %}
-      <article class="service-card">
-        <img src="/assets/img/{{ card.img }}" alt="" loading="lazy">
-        <h4>{{ card.title }}</h4>
-        <p>{{ card.text }}</p>
-        <a class="link-arrow" href="/services/#{{ card.anchor }}">Learn More
-          <svg viewBox="0 0 320 512" width="6" height="10" aria-hidden="true"><path fill="currentColor" d="M285.5 273 91.1 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.7-22.7c-9.4-9.4-9.4-24.5 0-33.9L188.5 256 34.5 101.3c-9.3-9.4-9.3-24.5 0-33.9l22.7-22.7c9.4-9.4 24.6-9.4 33.9 0L285.5 239c9.4 9.4 9.4 24.6 0 34z"/></svg>
-        </a>
+<section class="proof" aria-label="Featured in">
+  <div class="wrap proof__inner">
+    <p class="proof__label">Featured &amp; heard on</p>
+    <ul class="proof__list">
+      <li>The Wayland Post</li>
+      <li>Peace Talks Radio</li>
+      <li>Apple Podcasts</li>
+      <li>Wayland Free Public Library</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">How I can help</p>
+      <h2>Two ways to work together</h2>
+    </div>
+    <div class="pillars">
+      <article class="pillar">
+        <img src="/assets/img/service-editing.jpg" alt="Audio waveforms in an editing timeline" loading="lazy">
+        <div class="pillar__body">
+          <h3>Podcast editing &amp; mixing</h3>
+          <p>Hand your raw recordings to an editor who listens for the story. I shape each episode, clean up the audio, and mix it into something listeners want to finish.</p>
+          <ul class="checks">
+            <li>Story editing, framing, and pacing</li>
+            <li>Noise reduction and audio cleanup</li>
+            <li>Music, sound design, and final mix</li>
+          </ul>
+          <a class="link" href="/services/">See editing services</a>
+        </div>
       </article>
-      {%- endfor %}
+      <article class="pillar">
+        <img src="/assets/img/service-speaking.gif" alt="Yamini speaking at a podium" loading="lazy">
+        <div class="pillar__body">
+          <h3>Workshops &amp; classes</h3>
+          <p>Hands-on sessions for schools, libraries, community groups, and new creators who want to learn how podcasts are planned, recorded, and edited.</p>
+          <ul class="checks">
+            <li>Podcasting from idea to first episode</li>
+            <li>Audio editing fundamentals</li>
+            <li>Storytelling and interviewing for audio</li>
+          </ul>
+          <a class="link" href="/workshops/">See workshops</a>
+        </div>
+      </article>
     </div>
+  </div>
+</section>
 
-    <div class="featured">
-      <div class="featured__media">
-        <a class="play-btn" href="https://womenofwayland.com/" target="_blank" rel="noopener" aria-label="Listen to Women of Wayland">
-          <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M424.4 214.7 72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg>
-        </a>
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">The process</p>
+      <h2>From raw audio to a finished episode</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Consultation</h3>
+        <p>We talk through your show, your audience, and what you need — a single episode, a full season, or ongoing support.</p>
+      </li>
+      <li>
+        <h3>Edit &amp; mix</h3>
+        <p>I edit for story and clarity, clean up the audio, and add music and sound design using professional tools like Hindenburg Pro.</p>
+      </li>
+      <li>
+        <h3>Review &amp; deliver</h3>
+        <p>You listen, share feedback, and receive a polished episode that’s ready to publish.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap feature">
+    <div class="feature__media">
+      <img src="/assets/img/featured-wow.jpg" alt="Yamini with a Women of Wayland Season 3 sign" loading="lazy">
+    </div>
+    <div class="feature__text">
+      <p class="eyebrow">Featured work</p>
+      <h2>Women of Wayland</h2>
+      <p class="lead">A hometown podcast celebrating the remarkable women next door — now in its fifth season.</p>
+      <p>I created, host, and produce the show: from finding guests and recording interviews to editing, sound design, and publishing.</p>
+      <div class="feature__actions">
+        <a class="btn btn--outline" href="/portfolio/">View portfolio</a>
+        <a class="link" href="https://podcasts.apple.com/us/podcast/women-of-wayland-the-podcast/id1471535994" target="_blank" rel="noopener">Listen on Apple Podcasts</a>
       </div>
-      <div class="featured__text">
-        <h6 class="eyebrow">Featured Work</h6>
-        <h2>Women of Wayland</h2>
-        <p class="lead">A hometown podcast to celebrate women in the neighborhood.</p>
-        <p>I was inspired by my next-door women, who were professionals, mums, activists, volunteers, do-it-all hustlers in the true sense. I felt like there was a massive acknowledgement gap. There were stories that you would miss if you blinked too fast, but if you give them just a moment, it could leave you inspired.</p>
-        <a class="btn" href="/portfolio/">View My Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">Testimonials</p>
+        <h2>What clients say</h2>
       </div>
+      <a class="link" href="/testimonials/">Read all testimonials</a>
+    </div>
+    <div class="quotes">
+      {%- for t in testimonials %}{% if t.featured %}
+      <figure class="quote">
+        <blockquote>“{{ t.excerpt }}”</blockquote>
+        <figcaption><strong>{{ t.name }}</strong><span>{{ t.role }}</span></figcaption>
+      </figure>
+      {%- endif %}{% endfor %}
     </div>
   </div>
 </section>
 
-<section class="home-review">
-  <div class="container home-review__grid">
-    <div class="home-review__text">
-      <div class="stars stars--pink" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <blockquote>"Yamini is such a gracious host whose warmth just exudes from her voice. Her talents don&rsquo;t just end with her storytelling though. The editing that she does with each of her episode is meticulous and you can hear how well she mixes sounds and tunes in them. This woman is going places &#x1F4AA;&#x1F3FD;"</blockquote>
-      <h5>- Apple Podcast Listener</h5>
-      <a class="btn" href="/testimonials/">More Reviews</a>
-    </div>
-    <div class="home-review__img">
-      <img src="/assets/img/yamini-sitting.png" alt="Yamini Ranjan sitting in a chair" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<section class="home-cta dark-band">
-  <div class="dark-band__inner">
-    <h2>Let's Work Together!</h2>
-    <p>Learning, listening and leading are the mantras I live by. My experience combined with my degrees and passion make me the storyteller I am. Let me help you give wings to your story.</p>
-    <a class="btn btn--light" href="/contact/">Get In Touch</a>
-  </div>
-</section>
+{% include "cta.njk" %}
